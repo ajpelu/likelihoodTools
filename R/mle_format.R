@@ -44,7 +44,8 @@
 #' # Compute the MLE of the parameters
 #' results <- anneal(model = modelfun,
 #'   par = list(a = 0, b = 0),
-#'   var = list(DBH = "DBH", x = "Radius", mean = "predicted", sd = 0.815585, log = TRUE),
+#'   var = list(DBH = "DBH", x = "Radius", mean = "predicted",
+#'              sd = 0.815585, log = TRUE),
 #'   source_data = dataset,
 #'   par_lo = list(a = 0, b = 0),
 #'   par_hi = list(a = 50, b = 50),
