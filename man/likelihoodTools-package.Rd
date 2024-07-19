@@ -4,8 +4,20 @@
 \name{likelihoodTools-package}
 \alias{likelihoodTools}
 \alias{likelihoodTools-package}
-\title{likelihoodTools: What the Package Does (Title Case)}
+\title{likelihoodTools: Tools for manage results from Maximum Likelihood Estimation}
 \description{
-More about what it does (maybe more than one line) Use four spaces when indenting paragraphs within the Description.
+Tools for manage and explore the results of the Maximum Likelihood parameter Estimation generated with the 'likelihood' pkg.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/ajpelu/likelihoodTools}
+  \item Report bugs at \url{https://github.com/ajpelu/likelihoodTools/issues/}
+}
+
+}
+\author{
+\strong{Maintainer}: Antonio Jesús Pérez-Luque \email{ajpelu@gmail.com} (\href{https://orcid.org/0000-0002-1747-0469}{ORCID})
+
 }
 \keyword{internal}
