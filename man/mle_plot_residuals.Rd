@@ -24,7 +24,7 @@ of the \code{x} (results) list}
 
 \item{lab_predicted}{The text for the predicted axis lab (x-axis)}
 
-\item{...}{}
+\item{...}{other ggplot2 parameters}
 }
 \description{
 Plots residuals (observed - residuals) values \emph{vs.} predicted values. The

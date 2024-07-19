@@ -29,7 +29,7 @@ and slope of the regression of the observed on predicted values. See
 
 \item{lab_y}{The text for the y-axis lab}
 
-\item{...}{}
+\item{...}{other ggplot2 parameters}
 }
 \description{
 Plots observed values \emph{vs.} predicted values. The predicted values are obtained

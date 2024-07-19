@@ -14,16 +14,18 @@
 #' [`likelihood::Simulated Annealing Algorithm`]
 #' @param lab_x The text for the x-axis lab
 #' @param lab_y The text for the y-axis lab
-#' @param ...
+#' @param ... other ggplot2 parameters
 #'
 #' @export
+#'
+#' @importFrom rlang .data
 #'
 mle_plot_observed <- function(x, yvar, annotate = TRUE,
                               lab_x = "Observed",
                               lab_y = "Predicted", ...) {
 
   d <- x$source_data |>
-    dplyr::mutate(residuals = !!dplyr::sym(yvar)  - predicted) |>
+    dplyr::mutate(residuals = !!dplyr::sym(yvar)  - .data$predicted) |>
     dplyr::rename(observed = !!dplyr::sym(yvar))
 
   model_results <- mle_format(x, yvar = "rat")
@@ -31,12 +33,13 @@ mle_plot_observed <- function(x, yvar, annotate = TRUE,
   max_value <- max(max(d$predicted, na.rm = TRUE), max(d$observed, na.rm = TRUE))
   max_range <- max(0, max_value)
 
-  p <- ggplot2::ggplot(d, aes(x = predicted, y = observed)) +
+  p <- ggplot2::ggplot(data = d,
+                       ggplot2::aes(x = .data$predicted, y = .data$observed)) +
     ggplot2::labs(x = lab_x, y = lab_y) +
     ggplot2::geom_point() +
     ggplot2::geom_abline() +
     ggplot2::theme_bw() +
-    ggplot2::theme(panel.grid = element_blank()) +
+    ggplot2::theme(panel.grid = ggplot2::element_blank()) +
     ggplot2::xlim(0, max_range) +
     ggplot2::ylim(0, max_range)
 
