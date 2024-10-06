@@ -18,12 +18,70 @@
 #'
 mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
                            lab_predicted = "Predicted", ...) {
+  # check input is a list
+  if (!inherits(x, "list")) {
+    stop("x must be a list")
+  }
 
-  mpg <- hp <- mpg_div_hp <- NULL
+  # Check if the list contains the source_data element
+  if (!"source_data" %in% names(x)) {
+    stop("The list 'x' must contain an element named 'source_data'.")
+  }
+
+  # Check if source_data is a data.frame
+  if (!inherits(x$source_data, "data.frame")) {
+    stop("The 'source_data' element in 'x' must be a data frame.")
+  }
+
+
+  # Check if yvar is a character
+  if (!is.character(yvar)) {
+    stop("yvar must be a character")
+  }
+
+  # Check if yvar exists in the source_data
+  if (!yvar %in% names(x$source_data)) {
+    stop(paste("The variable", yvar, "is not present in the 'source_data' dataframe of the 'x' object."))
+  }
+
+  # Ensure that yvar is numeric
+  if (!is.numeric(x$source_data[[yvar]])) {
+    stop("The 'yvar' column must be numeric.")
+  }
+
+  # Check if the predicted column is in the source_data
+  if (!"predicted" %in% names(x$source_data)) {
+    stop("The `predicted` column is not present in the `source_data` dataframe of the `x` object`.")
+  }
+
+  # Ensure that predicted is numeric
+  if (!is.numeric(x$source_data$predicted)) {
+    stop("The 'predicted' column must be numeric.")
+  }
+
+  # Ensure lab_residuals and lab_predicted are character strings
+  if (!is.character(lab_residuals)) {
+    stop("The 'lab_residuals' argument must be a character string.")
+  }
+
+  if (!is.character(lab_predicted)) {
+    stop("The 'lab_predicted' argument must be a character string.")
+  }
+
+  # Prevent plotting if no data is present in the source_data
+  if (nrow(x$source_data) == 0) {
+    stop("The 'source_data' dataframe is empty.")
+  }
+
 
   d <- x$source_data |>
     dplyr::mutate(residuals = !!ggplot2::sym(yvar) - .data$predicted) |>
     dplyr::rename(observed = !!ggplot2::sym(yvar))
+
+  # Check if residuals is numeric
+  if (!is.numeric(d$residuals)) {
+    stop("Residuals must be numeric.")
+  }
 
 
   out <- ggplot2::ggplot(data = d,
