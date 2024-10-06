@@ -20,7 +20,7 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
                            lab_predicted = "Predicted", ...) {
   # check input is a list
   if (!inherits(x, "list")) {
-    stop("x must be a list")
+    stop("Input x must be a list")
   }
 
   # Check if the list contains the source_data element
