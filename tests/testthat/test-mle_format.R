@@ -11,6 +11,14 @@ valid_input <- list(
 )
 
 
+test_that("mle_format throws error when input is not a list", {
+  x <- data.frame(bai = c(10, 20, 30),
+                  predicted = c(12, 18, 25))
+
+  expect_error(mle_format(x, yvar = "bai"), "Input x must be a list")
+})
+
+
 # Test for correct behavior with valid input
 test_that("mle_format returns correct dataframe with valid input", {
 
@@ -121,3 +129,5 @@ test_that("mle_format throws error when RMSE calculation fails", {
   # RMSE calculation should fail due to NA values
   expect_error(mle_format(x, yvar = "bai"), "Error in computing RMSE.")
 })
+
+
