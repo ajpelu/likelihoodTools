@@ -46,7 +46,7 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
 
   # Ensure that yvar is numeric
   if (!is.numeric(x$source_data[[yvar]])) {
-    stop("The 'yvar' column must be numeric.")
+    stop(paste("The variable", yvar, "must be numeric."))
   }
 
   # Check if the predicted column is in the source_data
