@@ -24,11 +24,51 @@ mle_plot_observed <- function(x, yvar, annotate = TRUE,
                               lab_x = "Observed",
                               lab_y = "Predicted", ...) {
 
+
+  # Check that 'x' is a list and contains the required 'source_data' element
+  if (!is.list(x) || !("source_data" %in% names(x))) {
+    stop("'x' must be a list containing an element named 'source_data'")
+  }
+
+  # Check that 'source_data' within 'x' is a dataframe
+  if (!is.data.frame(x$source_data)) {
+    stop("The 'source_data' element of 'x' must be a data frame")
+  }
+
+  # Check that 'yvar' exists in the column names of 'source_data'
+  if (!yvar %in% names(x$source_data)) {
+    stop(paste("The variable 'yvar' ('", yvar, "') does not exist in the source data", sep = ""))
+  }
+
+  # Check that 'annotate' is a logical value
+  if (!is.logical(annotate)) {
+    stop("The 'annotate' argument must be a logical value")
+  }
+
+  # Check that 'lab_x' and 'lab_y' are character strings
+  if (!is.character(lab_x)) {
+    stop("The 'lab_x' argument must be a character value")
+  }
+  if (!is.character(lab_y)) {
+    stop("The 'lab_y' argument must be a character value")
+  }
+
   d <- x$source_data |>
     dplyr::mutate(residuals = !!dplyr::sym(yvar)  - .data$predicted) |>
     dplyr::rename(observed = !!dplyr::sym(yvar))
 
-  model_results <- mle_format(x, yvar = "rat")
+  # Check if the transformed data has the expected columns
+  if (!("predicted" %in% names(d))) {
+    stop("The 'predicted' column does not exist")
+  }
+
+  # Get model results
+  model_results <- mle_format(x, yvar = yvar)
+
+  # Check if model results have the required elements
+  if (!is.list(model_results) || !("R2" %in% names(model_results)) || !("slope" %in% names(model_results))) {
+    stop("The model results do not contain the required elements ('R2' or 'slope')")
+  }
 
   max_value <- max(max(d$predicted, na.rm = TRUE), max(d$observed, na.rm = TRUE))
   max_range <- max(0, max_value)
