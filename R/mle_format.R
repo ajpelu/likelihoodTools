@@ -61,7 +61,7 @@
 #'
 mle_format <- function(x, yvar) {
 
-  if (!is.list(x)) {
+  if (!inherits(x, "list")) {
     stop("Input x must be a list.")
   }
 
@@ -73,10 +73,9 @@ mle_format <- function(x, yvar) {
   }
 
   # Check if source_data is a data.frame
-  if (!is.data.frame(x$source_data)) {
+  if (!inherits(x$source_data, "data.frame")) {
     stop("x$source_data must be a data frame.")
   }
-
   # Check if yvar is in the source_data
   if (!yvar %in% names(x$source_data)) {
     stop(paste("The variable", yvar, "is not present in the `source_data` dataframe of the `x` object`."))
