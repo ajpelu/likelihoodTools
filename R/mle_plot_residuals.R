@@ -36,7 +36,7 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
 
   # Check if yvar is a character
   if (!is.character(yvar)) {
-    stop("yvar must be a character")
+    stop("Please specify the name of the 'yvar' as character")
   }
 
   # Check if yvar exists in the source_data
@@ -51,12 +51,12 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
 
   # Check if the predicted column is in the source_data
   if (!"predicted" %in% names(x$source_data)) {
-    stop("The `predicted` column is not present in the `source_data` dataframe of the `x` object`.")
+    stop("The variable 'predicted' is not present in the 'source_data' dataframe of the 'x' object.")
   }
 
   # Ensure that predicted is numeric
   if (!is.numeric(x$source_data$predicted)) {
-    stop("The 'predicted' column must be numeric.")
+    stop("The variable 'predicted' must be numeric.")
   }
 
   # Ensure lab_residuals and lab_predicted are character strings
@@ -76,11 +76,6 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
   d <- x$source_data |>
     dplyr::mutate(residuals = !!ggplot2::sym(yvar) - .data$predicted) |>
     dplyr::rename(observed = !!ggplot2::sym(yvar))
-
-  # Check if residuals is numeric
-  if (!is.numeric(d$residuals)) {
-    stop("Residuals must be numeric.")
-  }
 
   out <- ggplot2::ggplot(data = d,
                          ggplot2::aes(x = .data$predicted, y = .data$residuals)) +
