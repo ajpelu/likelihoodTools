@@ -73,7 +73,6 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
     stop("The 'source_data' dataframe is empty.")
   }
 
-
   d <- x$source_data |>
     dplyr::mutate(residuals = !!ggplot2::sym(yvar) - .data$predicted) |>
     dplyr::rename(observed = !!ggplot2::sym(yvar))
@@ -82,7 +81,6 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
   if (!is.numeric(d$residuals)) {
     stop("Residuals must be numeric.")
   }
-
 
   out <- ggplot2::ggplot(data = d,
                          ggplot2::aes(x = .data$predicted, y = .data$residuals)) +
