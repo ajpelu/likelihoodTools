@@ -8,15 +8,15 @@
 #'
 #' @return A dataframe with outputs from the results of the simulated
 #' annealing maximum parameter estimation. This dataframe contains the following
-#' columns (see help in [likelihood::anneal]):
+#' columns (see help in [likelihood::anneal()]):
 #'
 #' * `max_likeli` The maximum likelihood value of the model
 #' * `n_params` The number of the estimated parameters
 #' * `aic_corr` The value of Akaike's Information Criterion “corrected” for
-#' small sample size. See the [`likelihood::Simulated Annealing Algorithm`] help
+#' small sample size. See the [likelihood::Simulated Annealing Algorithm] help
 #' page of the [likelihood] package for more information.
 #' * `aic` The value of Akaike's Information Criterion. See the
-#' [`likelihood::Simulated Annealing Algorithm`] help page of the [likelihood]
+#' [likelihood::Simulated Annealing Algorithm] help page of the [likelihood]
 #' package for more information.
 #' `slope` Slope of observed values linearly regressed on those predicted by
 #' model, using the parameter maximum likelihood estimates. The intercept is

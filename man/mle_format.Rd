@@ -17,15 +17,15 @@ of the \code{x} (results) list}
 \value{
 A dataframe with outputs from the results of the simulated
 annealing maximum parameter estimation. This dataframe contains the following
-columns (see help in \link[likelihood:anneal]{likelihood::anneal}):
+columns (see help in \code{\link[likelihood:anneal]{likelihood::anneal()}}):
 \itemize{
 \item \code{max_likeli} The maximum likelihood value of the model
 \item \code{n_params} The number of the estimated parameters
 \item \code{aic_corr} The value of Akaike's Information Criterion “corrected” for
-small sample size. See the \code{\link[likelihood:simulated_annealing_algorithm]{likelihood::Simulated Annealing Algorithm}} help
+small sample size. See the \link[likelihood:simulated_annealing_algorithm]{likelihood::Simulated Annealing Algorithm} help
 page of the \link{likelihood} package for more information.
 \item \code{aic} The value of Akaike's Information Criterion. See the
-\code{\link[likelihood:simulated_annealing_algorithm]{likelihood::Simulated Annealing Algorithm}} help page of the \link{likelihood}
+\link[likelihood:simulated_annealing_algorithm]{likelihood::Simulated Annealing Algorithm} help page of the \link{likelihood}
 package for more information.
 \code{slope} Slope of observed values linearly regressed on those predicted by
 model, using the parameter maximum likelihood estimates. The intercept is
