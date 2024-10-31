@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![Codecov test coverage](https://codecov.io/gh/ajpelu/likelihoodTools/graph/badge.svg)](https://app.codecov.io/gh/ajpelu/likelihoodTools)
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![R-CMD-check](https://github.com/ajpelu/likelihoodTools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ajpelu/likelihoodTools/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 The likelihoodTools package provides tools for managing and exploring parameter 
@@ -25,6 +26,9 @@ estimation results derived from Maximum Likelihood Estimation (MLE) using the
 [likelihood](https://cran.r-project.org/web/packages/likelihood/index.html) package. This package simplifies analysis workflows by offering 
 functions that support the organization, visualization, and summary of MLE 
 outcomes, aiding in deeper statistical insights.
+
+The package is designed to simplify the exploration and interpretation of MLE results, 
+providing a comprehensive set of tools for managing parameter estimation outcomes.
 
 ## Installation
 
@@ -42,10 +46,24 @@ pak::pak("ajpelu/likelihoodTools")
 - Functions to explore, visualize, and interpret parameter estimation results.
 - Integrations with dplyr and ggplot2 for efficient data manipulation and visualization.
 
-## Dependencies
-likelihoodTools imports dplyr, ggplot2, and rlang for streamlined data manipulation, plotting, and enhanced compatibility with tidyverse workflows.
+## Citation
 
-## Target Audience
-Ideal for statisticians, data analysts, and researchers working with Maximum Likelihood Estimation who seek to streamline their analysis process.
+If using this package, please cite it:
+
+```{r comment=NA}
+citation("likelihoodTools")
+```
+
+## Funding 
+
+Antonio J. Pérez-Luque received funding from the Spanish Ministry of Science and 
+Innovation through the Juan de la Cierva postdoctoral fellowship program. 
+Grant JDC2022-050056-I funded by MCIN/AEI/ 10.13039/501100011033 and by “European Union NextGenerationEU/PRTR
+
+
+![](https://drive.google.com/file/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-/view?usp=sharing)
+
+
+
 
 
