@@ -3,3 +3,4 @@
 ^codemeta\.json$
 ^data-raw$
 ^LICENSE\.md$
+^vignettes/articles$
