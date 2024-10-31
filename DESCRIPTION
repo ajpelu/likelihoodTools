@@ -1,14 +1,14 @@
 Package: likelihoodTools
-Title: Tools for manage results from Maximum Likelihood Estimation
+Title: Tools for managing results from Maximum Likelihood Estimation
 Version: 0.1.0
 Authors@R: 
     person("Antonio Jesús", "Pérez-Luque", , "ajpelu@gmail.com", role = c("cre", "aut"),
            comment = c(ORCID = "0000-0002-1747-0469"))
-Description: Tools for manage and explore the results of the Maximum Likelihood 
-    parameter Estimation generated with the 'likelihood' pkg. 
+Description: Tools for managing and exploring parameter estimation results derived 
+    from Maximum Likelihood Estimation (MLE) using the `likelihood` package. 
 License: MIT + file LICENSE
 Encoding: UTF-8
-URL: https://github.com/ajpelu/likelihoodTools
+URL: https://github.com/ajpelu/likelihoodTools, https://ajpelu.github.io/likelihoodTools/
 BugReports: https://github.com/ajpelu/likelihoodTools/issues/
 LazyData: true
 Depends: 
