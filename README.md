@@ -74,4 +74,4 @@ fellowship program. Grant JDC2022-050056-I funded by MCIN/AEI/
 
 ![](https://lh3.googleusercontent.com/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-=w910-h417-rw)
 
-\![\]<https://lh3.googleusercontent.com/d/1un_9sdamX60exDR4GolN87mzWTNzf4C2=w910-h417-rw>
+![](https://lh3.googleusercontent.com/d/1un_9sdamX60exDR4GolN87mzWTNzf4C2=w910-h417-rw)
