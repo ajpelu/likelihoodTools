@@ -48,22 +48,20 @@ If using this package, please cite it:
 
 ``` r
 citation("likelihoodTools")
-Warning in citation("likelihoodTools"): could not determine year for
-'likelihoodTools' from package DESCRIPTION file
 To cite package 'likelihoodTools' in publications use:
 
-  Pérez-Luque A (????). _likelihoodTools: Tools for managing results
+  Pérez-Luque AJ (2024). _likelihoodTools: Tools for managing results
   from Maximum Likelihood Estimation_. R package version 0.1.0,
-  https://ajpelu.github.io/likelihoodTools/,
-  <https://github.com/ajpelu/likelihoodTools>.
+  <https://ajpelu.github.io/likelihoodTools/>.
 
 A BibTeX entry for LaTeX users is
 
   @Manual{,
     title = {likelihoodTools: Tools for managing results from Maximum Likelihood Estimation},
     author = {Antonio Jesús Pérez-Luque},
-    note = {R package version 0.1.0, https://ajpelu.github.io/likelihoodTools/},
-    url = {https://github.com/ajpelu/likelihoodTools},
+    year = {2024},
+    url = {https://ajpelu.github.io/likelihoodTools/},
+    note = {R package version 0.1.0},
   }
 ```
 
@@ -74,4 +72,4 @@ Science and Innovation through the Juan de la Cierva postdoctoral
 fellowship program. Grant JDC2022-050056-I funded by MCIN/AEI/
 10.13039/501100011033 and by “European Union NextGenerationEU/PRTR
 
-![](https://drive.google.com/file/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-/view?usp=sharing)
+![](https://lh3.googleusercontent.com/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-=w1366-h625-rw)
