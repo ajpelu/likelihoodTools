@@ -4,14 +4,15 @@
 \name{likelihoodTools-package}
 \alias{likelihoodTools}
 \alias{likelihoodTools-package}
-\title{likelihoodTools: Tools for manage results from Maximum Likelihood Estimation}
+\title{likelihoodTools: Tools for managing results from Maximum Likelihood Estimation}
 \description{
-Tools for manage and explore the results of the Maximum Likelihood parameter Estimation generated with the 'likelihood' pkg.
+Tools for managing and exploring parameter estimation results derived from Maximum Likelihood Estimation (MLE) using the `likelihood` package.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://github.com/ajpelu/likelihoodTools}
+  \item \url{https://ajpelu.github.io/likelihoodTools/}
   \item Report bugs at \url{https://github.com/ajpelu/likelihoodTools/issues/}
 }
 
