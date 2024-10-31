@@ -1,0 +1,206 @@
+---
+title: "Getting started"
+editor_options: 
+  chunk_output_type: console
+bibliography: grateful-refs.bib
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  message = FALSE,
+  fig.height = 4.5,
+  fig.width = 4.5,
+  fig.align = "center",
+  comment = "#>"
+)
+```
+
+```{r pkgs}
+library(likelihood)
+library(likelihoodTools)
+```
+
+## Introduction
+
+This vignette will show you how to get started with the `likelihoodTools` package. 
+The `likelihoodTools` package provides a set of tools to help you work with the 
+`likelihood` package [@likelihood]. 
+
+We use the dataset and the example included in the `likelihood` to 
+illustrate how to use the `likelihoodTools` package. 
+
+We will show you how to create a model function, compute the MLE of the parameters 
+(both steps from `likelihood` package), and then how to use the `likelihoodTools` 
+package to: (i) extract the main information from the MLE results, (ii) plot 
+residuals vs. predicted values, and (iii) plot the residuals vs. the observed values.
+
+### Maximum Likelihood Estimation of the models parameters
+As indicated in the `likelihood` package the first step is to formulate the model 
+function, and then compute the MLE of the parameters. 
+
+
+```{r load_data}
+data(crown_rad)
+dataset <- crown_rad
+```
+
+
+```{r model_fun}
+modelfun <- function (a, b, DBH) {a + b * DBH}
+```
+
+Then, compute them MLE of the parameters using the `anneal` function from the 
+`likelihood` package.
+
+```{r mle}
+results <- anneal(model = modelfun,
+                  par = list(a = 0, b = 0),
+                  var = list(DBH = "DBH", x = "Radius", mean = "predicted",
+                             sd = 0.815585, log = TRUE),
+                  source_data = dataset,
+                  par_lo = list(a = 0, b = 0),
+                  par_hi = list(a = 50, b = 50),
+                  pdf = dnorm,
+                  dep_var = "Radius",
+                  max_iter = 20000,
+                  show_display = FALSE)
+```
+
+
+### Extract the main information from the MLE results
+
+The `likellihood::anneal()` function returns a list object with information on the annealing run. 
+This list-type object contains several information (see `likellihood::anneal()` for more details).
+The `mle_format()` function from `likelihoodTools` package allows extract the main 
+information from the MLE results in a more user-friendly way. 
+
+```{r mle_format}
+mle_format(results, yvar = "Radius")
+```
+
+You can plot the table with more style using the`kableExtra` [@kableExtra] package.
+
+```{r custom_table}
+m <- mle_format(results, yvar = "Radius")
+
+# Rename the columns
+colnames(m) <- c(
+  "Maximum Likelihood", 
+  "# Params.", 
+  "AIC~cor~", 
+  "AIC", 
+  "R^2^", 
+  "Slope", 
+  "RMSE"
+)
+
+# Print the results in a table
+library(kableExtra)
+kable(m, escape = FALSE, caption = "MLE Results", digits = 3) %>%
+  kable_styling(full_width = F, position = "center", bootstrap_options = c("striped", "hover"))
+```
+
+
+### Plot the residuals vs. predicted values 
+
+The `mle_plot_residuals()` function allows you to plot the residuals 
+(observed - residuals) values *vs.* predicted values. The predicted 
+values are obtained from the model with the parameters values estimated by maximum
+likelihood estimation using simulated annealing.
+
+```{r plot_residuals}
+p_residuals <- mle_plot_residuals(results, yvar = "Radius")
+```
+
+### Plot the predicted vs. observed values
+
+The `mle_plot_observed()` function allows you to plot the predicted values *vs.* 
+observed values. The predicted values are obtained from the model with the parameters 
+values estimated by maximum likelihood estimation using simulated annealing.
+
+```{r plot_observed}
+p_observed <- mle_plot_observed(results, yvar = "Radius")
+```
+
+### Customize the plot
+If you don't like the default plot, you can customize it using  `ggplot2` [@@ggplot2] parameters.
+For example, you can increase the size of the points, change the color, change axis titles, etc.
+
+```{r plot_observed_custom}
+p_observed +
+  ggplot2::geom_point(size = 2, color = "red") +
+  ggplot2::labs(x = "Observed Radius", y = "Predicted Radius") +
+  ggplot2::theme(
+    axis.title.x = ggplot2::element_text(size = 13, face = "bold"),
+    axis.title.y = ggplot2::element_text(size = 13, face = "bold")
+  )
+```
+
+
+### Plot the distribution of the residuals 
+
+Maybe the user could be interested in plot the distribution of the residuals. 
+We provided a code to do this. 
+
+```{r residuals_dist}
+library(ggplot2)
+library(dplyr)
+
+# compute the residuals
+d <- results$source_data |> 
+  dplyr::mutate(residuals = Radius - predicted)
+
+# plot the histogram
+p_residuals_dist <- ggplot(data = d, aes(x = residuals)) +
+  geom_histogram(aes(y = after_stat(density), x = residuals), 
+                   fill = "gray", col = "white", bins = 30) +
+  theme_bw() +
+  theme(panel.grid = element_blank()) +
+  xlab("Residuals") +
+  ylab("Density")
+
+p_residuals_dist 
+```
+
+Now, we can add the distribution to the histogram. For those, we used the `MASS` package
+[@MASS]. 
+
+```{r residuals_dist_fit}
+library(MASS)
+
+# estimate the distribution of the residuals  
+dist <- MASS::fitdistr(d$residuals, "normal") 
+params <- as.data.frame(t(dist$estimate))
+
+
+p_residuals_dist <- p_residuals_dist  + stat_function(fun = dnorm, 
+              args = list(mean = params$mean, 
+                          sd = params$sd), 
+              color = "black", size = 1) 
+```
+
+
+### More customization
+
+Maybe the user is intereseted in arrange the residuals plots, the observed vs. 
+predicted and the error distribution plots in a single plot. There are several packages 
+as `patchwork` [@patchwork] or `cowplot` [@cowplot] that allow you to do this. Here, 
+we provide a simple code to do this. 
+
+```{r arrange_plots}
+#| fig.width: 10
+#| fig.height: 5
+
+library(patchwork)
+
+
+(p_observed + p_residuals + p_residuals_dist +  plot_annotation(tag_levels = "a")) & 
+  theme(axis.title = element_text(size = 14, face = "bold"), 
+        axis.text = element_text(size = 11),
+        plot.tag = element_text(size = 14, face = "bold"))
+
+```
+
+# References
+
