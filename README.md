@@ -72,4 +72,8 @@ Science and Innovation through the Juan de la Cierva postdoctoral
 fellowship program. Grant JDC2022-050056-I funded by MCIN/AEI/
 10.13039/501100011033 and by “European Union NextGenerationEU/PRTR
 
-![](https://lh3.googleusercontent.com/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-=w1366-h625-rw)
+<img
+src="https://lh3.googleusercontent.com/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-=w1366-h625-rw"
+style="height:70.0%" />
+
+![](inst/icifor_logo.png)
