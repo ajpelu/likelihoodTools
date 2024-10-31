@@ -14,7 +14,8 @@
 #' @param ... other ggplot2 parameters
 #' @export
 #'
-#' @importFrom rlang .data
+#' @importFrom rlang .data sym
+#'
 #'
 mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
                            lab_predicted = "Predicted", ...) {
@@ -32,7 +33,6 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
   if (!inherits(x$source_data, "data.frame")) {
     stop("The 'source_data' element in 'x' must be a data frame.")
   }
-
 
   # Check if yvar is a character
   if (!is.character(yvar)) {
@@ -74,8 +74,8 @@ mle_plot_residuals <- function(x, yvar, lab_residuals = "Residuals",
   }
 
   d <- x$source_data |>
-    dplyr::mutate(residuals = !!ggplot2::sym(yvar) - .data$predicted) |>
-    dplyr::rename(observed = !!ggplot2::sym(yvar))
+    dplyr::mutate(residuals = !!rlang::sym(yvar) - .data$predicted) |>
+    dplyr::rename(observed = !!rlang::sym(yvar))
 
   out <- ggplot2::ggplot(data = d,
                          ggplot2::aes(x = .data$predicted, y = .data$residuals)) +
