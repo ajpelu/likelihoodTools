@@ -18,26 +18,65 @@
 #'
 #' @export
 #'
-#' @importFrom rlang .data
+#' @importFrom rlang .data sym
 #'
 mle_plot_observed <- function(x, yvar, annotate = TRUE,
                               lab_x = "Observed",
                               lab_y = "Predicted", ...) {
 
 
-  # Check that 'x' is a list and contains the required 'source_data' element
-  if (!is.list(x) || !("source_data" %in% names(x))) {
-    stop("'x' must be a list containing an element named 'source_data'")
+  # check input is a list
+  if (!inherits(x, "list")) {
+    stop("Input x must be a list")
   }
 
-  # Check that 'source_data' within 'x' is a dataframe
-  if (!is.data.frame(x$source_data)) {
-    stop("The 'source_data' element of 'x' must be a data frame")
+  # Check if the list contains the source_data element
+  if (!"source_data" %in% names(x)) {
+    stop("The list 'x' must contain an element named 'source_data'.")
   }
 
-  # Check that 'yvar' exists in the column names of 'source_data'
+  # Check if source_data is a data.frame
+  if (!inherits(x$source_data, "data.frame")) {
+    stop("The 'source_data' element in 'x' must be a data frame.")
+  }
+
+  # Check if yvar is a character
+  if (!is.character(yvar)) {
+    stop("Please specify the name of the 'yvar' as character")
+  }
+
+  # Check if yvar exists in the source_data
   if (!yvar %in% names(x$source_data)) {
-    stop(paste("The variable 'yvar' ('", yvar, "') does not exist in the source data", sep = ""))
+    stop(paste("The variable", yvar, "is not present in the 'source_data' dataframe of the 'x' object."))
+  }
+
+  # Ensure that yvar is numeric
+  if (!is.numeric(x$source_data[[yvar]])) {
+    stop(paste("The variable", yvar, "must be numeric."))
+  }
+
+  # Check if the predicted column is in the source_data
+  if (!"predicted" %in% names(x$source_data)) {
+    stop("The variable 'predicted' is not present in the 'source_data' dataframe of the 'x' object.")
+  }
+
+  # Ensure that predicted is numeric
+  if (!is.numeric(x$source_data$predicted)) {
+    stop("The variable 'predicted' must be numeric.")
+  }
+
+  # Ensure lab_x and lab_predicted are character strings
+  if (!is.character(lab_x)) {
+    stop("The 'lab_x' argument must be a character string.")
+  }
+
+  if (!is.character(lab_y)) {
+    stop("The 'lab_y' argument must be a character string.")
+  }
+
+  # Prevent plotting if no data is present in the source_data
+  if (nrow(x$source_data) == 0) {
+    stop("The 'source_data' dataframe is empty.")
   }
 
   # Check that 'annotate' is a logical value
@@ -45,30 +84,12 @@ mle_plot_observed <- function(x, yvar, annotate = TRUE,
     stop("The 'annotate' argument must be a logical value")
   }
 
-  # Check that 'lab_x' and 'lab_y' are character strings
-  if (!is.character(lab_x)) {
-    stop("The 'lab_x' argument must be a character value")
-  }
-  if (!is.character(lab_y)) {
-    stop("The 'lab_y' argument must be a character value")
-  }
-
   d <- x$source_data |>
-    dplyr::mutate(residuals = !!dplyr::sym(yvar)  - .data$predicted) |>
-    dplyr::rename(observed = !!dplyr::sym(yvar))
-
-  # Check if the transformed data has the expected columns
-  if (!("predicted" %in% names(d))) {
-    stop("The 'predicted' column does not exist")
-  }
+    dplyr::mutate(residuals = !!rlang::sym(yvar)  - .data$predicted) |>
+    dplyr::rename(observed = !!rlang::sym(yvar))
 
   # Get model results
   model_results <- mle_format(x, yvar = yvar)
-
-  # Check if model results have the required elements
-  if (!is.list(model_results) || !("R2" %in% names(model_results)) || !("slope" %in% names(model_results))) {
-    stop("The model results do not contain the required elements ('R2' or 'slope')")
-  }
 
   max_value <- max(max(d$predicted, na.rm = TRUE), max(d$observed, na.rm = TRUE))
   max_range <- max(0, max_value)
