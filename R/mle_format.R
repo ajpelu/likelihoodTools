@@ -13,10 +13,10 @@
 #' * `max_likeli` The maximum likelihood value of the model
 #' * `n_params` The number of the estimated parameters
 #' * `aic_corr` The value of Akaike's Information Criterion “corrected” for
-#' small sample size. See the [likelihood::Simulated Annealing Algorithm] help
-#' page of the [likelihood] package for more information.
+#' small sample size. See the "Simulated Annealing Algorithm" help
+#' page of the [likelihood](https://cran.r-project.org/package=likelihood) package for more information.
 #' * `aic` The value of Akaike's Information Criterion. See the
-#' [likelihood::Simulated Annealing Algorithm] help page of the [likelihood]
+#' "Simulated Annealing Algorithm" help page of the [likelihood](https://cran.r-project.org/package=likelihood)
 #' package for more information.
 #' `slope` Slope of observed values linearly regressed on those predicted by
 #' model, using the parameter maximum likelihood estimates. The intercept is
