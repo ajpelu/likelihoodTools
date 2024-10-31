@@ -97,7 +97,7 @@ colnames(m) <- c(
 
 # Print the results in a table
 library(kableExtra)
-kable(m, escape = FALSE, caption = "MLE Results", digits = 3) %>%
+kable(m, escape = FALSE, caption = "MLE Results", digits = 3) |> 
   kable_styling(full_width = F, position = "center", bootstrap_options = c("striped", "hover"))
 ```
 
