@@ -1,5 +1,6 @@
 ---
 output: github_document
+bibliography: references.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -54,6 +55,20 @@ If using this package, please cite it:
 citation("likelihoodTools")
 ```
 
+### A litle of history
+
+The likelihood package was developed initially by [Charles Canham](https://www.caryinstitute.org/science/our-scientists/dr-charles-d-canham) 
+and [Lora Murphy](https://www.caryinstitute.org/lora-murphy) from the [Cary Institute 
+of Ecosystem Studies](https://www.caryinstitute.org/) (Milbrook, NY, US). 
+The package was designed to facilitate the use of maximum likelihood estimation in R, 
+using simulated annealing as the optimization routine. The implementation of simulated 
+annealing was adapted from @Goffeetal1994GlobalOptimization, and allows bounded searches.
+
+The likelihood package has been used in multiple scientific studies to explore 
+various aspects of tree forest ecology worldwide [*e.g*. @CanhamUriarte2006AnalysisNeighborhood;@GomezAparicioetal2009ArePine;@GeaIzquierdoetal2013GrowthProjections;@Canhametal2006NeighborhoodAnalyses;@GomezAparicioetal2011DisentanglingRelative;@FernandezdeUnaetal2015StandCompetition]. Despite its broad use, 
+it has lacked user-friendly tools for managing and exploring parameter estimation 
+results. This gap inspired the development of the likelihoodTools package
+
 ## Funding 
 
 Antonio J. Pérez-Luque received funding from the Spanish Ministry of Science and 
@@ -65,3 +80,5 @@ Grant JDC2022-050056-I funded by MCIN/AEI/ 10.13039/501100011033 and by “Europ
 
 ![](https://lh3.googleusercontent.com/d/1un_9sdamX60exDR4GolN87mzWTNzf4C2=w910-h417-rw)
 
+
+## References
