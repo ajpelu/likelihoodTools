@@ -1,7 +1,7 @@
 ---
 output: github_document
-bibliography: references.bib
-csl: ecology.csl
+bibliography: inst/references.bib
+csl: inst/ecology.csl
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -75,7 +75,6 @@ results. This gap inspired the development of the likelihoodTools package
 Antonio J. Pérez-Luque received funding from the Spanish Ministry of Science and 
 Innovation through the Juan de la Cierva postdoctoral fellowship program. 
 Grant JDC2022-050056-I funded by MCIN/AEI/ 10.13039/501100011033 and by “European Union NextGenerationEU/PRTR
-
 
 ![](https://lh3.googleusercontent.com/d/1mMqNhNAeIlEyY_QTjZZ7bLtV96pg0ww-=w910-h417-rw)
 
