@@ -18,7 +18,6 @@ Roxygen: list(markdown = TRUE)
 Imports: 
     dplyr,
     ggplot2,
-    lifecycle,
     rlang
 Suggests: 
     testthat (>= 3.0.0),
