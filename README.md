@@ -74,15 +74,13 @@ and [Lora Murphy](https://www.caryinstitute.org/lora-murphy) from the
 (Milbrook, NY, US). The package was designed to facilitate the use of
 maximum likelihood estimation in R, using simulated annealing as the
 optimization routine. The implementation of simulated annealing was
-adapted from Goffe, Ferrier, and Rogers (1994), and allows bounded
-searches.
+adapted from Goffe et al. (1994), and allows bounded searches.
 
 The likelihood package has been used in multiple scientific studies to
 explore various aspects of tree forest ecology worldwide (*e.g*. Canham
-and Uriarte 2006; Gómez-Aparicio et al. 2009, 2011; Gea-Izquierdo,
-Fernández-de-Uña, and Cañellas 2013; Canham et al. 2006;
-Fernández-de-Uña, Cañellas, and Gea-Izquierdo 2015). Despite its broad
-use, it has lacked user-friendly tools for managing and exploring
+and Uriarte 2006, Canham et al. 2006, Gómez-Aparicio et al. 2009, 2011,
+Gea-Izquierdo et al. 2013, Fernández-de-Uña et al. 2015). Despite its
+broad use, it has lacked user-friendly tools for managing and exploring
 parameter estimation results. This gap inspired the development of the
 likelihoodTools package
 
@@ -100,73 +98,73 @@ fellowship program. Grant JDC2022-050056-I funded by MCIN/AEI/
 ## References
 
 <div id="refs" class="references csl-bib-body hanging-indent"
-entry-spacing="0">
+entry-spacing="0" line-spacing="2">
 
 <div id="ref-Canhametal2006NeighborhoodAnalyses" class="csl-entry">
 
-Canham, Charles D., Michael J. Papaik, María Uriarte, William H.
-McWilliams, Jennifer C. Jenkins, and Mark J. Twery. 2006. “Neighborhood
-Analyses of Canopy Tree Competition Along Environmental Gradients in New
-England Forests.” *Ecological Applications* 16 (2): 540–54.
-[https://doi.org/10.1890/1051-0761(2006)016\[0540:NAOCTC\]2.0.CO;2](https://doi.org/10.1890/1051-0761(2006)016[0540:NAOCTC]2.0.CO;2).
+Canham, C. D., M. J. Papaik, M. Uriarte, W. H. McWilliams, J. C.
+Jenkins, and M. J. Twery. 2006. [Neighborhood analyses of canopy tree
+competition along environmental gradients in new england
+forests](https://doi.org/10.1890/1051-0761(2006)016[0540:NAOCTC]2.0.CO;2).
+Ecological Applications 16:540–554.
 
 </div>
 
 <div id="ref-CanhamUriarte2006AnalysisNeighborhood" class="csl-entry">
 
-Canham, Charles D., and María Uriarte. 2006. “Analysis of Neighborhood
-Dynamics of Forest Ecosystems Using Likelihood Methods and Modeling.”
-*Ecological Applications* 16 (1): 62–73.
-<https://doi.org/10.1890/04-0657>.
+Canham, C. D., and M. Uriarte. 2006. [Analysis of neighborhood dynamics
+of forest ecosystems using likelihood methods and
+modeling](https://doi.org/10.1890/04-0657). Ecological Applications
+16:62–73.
 
 </div>
 
 <div id="ref-FernandezdeUnaetal2015StandCompetition" class="csl-entry">
 
-Fernández-de-Uña, Laura, Isabel Cañellas, and Guillermo Gea-Izquierdo.
-2015. “Stand Competition Determines How Different Tree Species Will Cope
-with a Warming Climate.” *PLOS ONE* 10 (3, 3): e0122255.
-<https://doi.org/10.1371/journal.pone.0122255>.
+Fernández-de-Uña, L., I. Cañellas, and G. Gea-Izquierdo. 2015. [Stand
+competition determines how different tree species will cope with a
+warming climate](https://doi.org/10.1371/journal.pone.0122255). PLOS ONE
+10:e0122255.
 
 </div>
 
 <div id="ref-GeaIzquierdoetal2013GrowthProjections" class="csl-entry">
 
-Gea-Izquierdo, Guillermo, Laura Fernández-de-Uña, and Isabel Cañellas.
-2013. “Growth Projections Reveal Local Vulnerability of Mediterranean
-Oaks with Rising Temperatures.” *Forest Ecology and Management* 305:
-282–93. <https://doi.org/10.1016/j.foreco.2013.05.058>.
+Gea-Izquierdo, G., L. Fernández-de-Uña, and I. Cañellas. 2013. [Growth
+projections reveal local vulnerability of Mediterranean oaks with rising
+temperatures](https://doi.org/10.1016/j.foreco.2013.05.058). Forest
+Ecology and Management 305:282–293.
 
 </div>
 
 <div id="ref-Goffeetal1994GlobalOptimization" class="csl-entry">
 
-Goffe, William L., Gary D. Ferrier, and John Rogers. 1994. “Global
-Optimization of Statistical Functions with Simulated Annealing.”
-*Journal of Econometrics* 60 (1-2): 65–99.
-<https://doi.org/10.1016/0304-4076(94)90038-8>.
+Goffe, W. L., G. D. Ferrier, and J. Rogers. 1994. [Global optimization
+of statistical functions with simulated
+annealing](https://doi.org/10.1016/0304-4076(94)90038-8). Journal of
+Econometrics 60:65–99.
 
 </div>
 
 <div id="ref-GomezAparicioetal2011DisentanglingRelative"
 class="csl-entry">
 
-Gómez-Aparicio, Lorena, Raúl García-Valdés, Paloma Ruíz-Benito, and
-Miguel A. Zavala. 2011. “Disentangling the Relative Importance of
-Climate, Size and Competition on Tree Growth in Iberian Forests:
-Implications for Forest Management Under Global Change: Neighborhood
-Models and Tree Growth Drivers.” *Global Change Biology* 17 (7):
-2400–2414. <https://doi.org/10.1111/j.1365-2486.2011.02421.x>.
+Gómez-Aparicio, L., R. García-Valdés, P. Ruíz-Benito, and M. A. Zavala.
+2011. [Disentangling the relative importance of climate, size and
+competition on tree growth in iberian forests: Implications for forest
+management under global change: Neighborhood models and tree growth
+drivers](https://doi.org/10.1111/j.1365-2486.2011.02421.x). Global
+Change Biology 17:2400–2414.
 
 </div>
 
 <div id="ref-GomezAparicioetal2009ArePine" class="csl-entry">
 
-Gómez-Aparicio, Lorena, Miguel A. Zavala, Francisco J. Bonet, and Regino
-Zamora. 2009. “Are Pine Plantations Valid Tools for Restoring
-Mediterranean Forests? An Assessment Along Abiotic and Biotic
-Gradients.” *Ecological Applications* 19 (8): 2124–41.
-<https://doi.org/10.1890/08-1656.1>.
+Gómez-Aparicio, L., M. A. Zavala, F. J. Bonet, and R. Zamora. 2009. [Are
+pine plantations valid tools for restoring Mediterranean forests? An
+assessment along abiotic and biotic
+gradients](https://doi.org/10.1890/08-1656.1). Ecological Applications
+19:2124–2141.
 
 </div>
 
