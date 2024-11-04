@@ -26,6 +26,10 @@ of the \code{x} (results) list}
 
 \item{...}{other ggplot2 parameters}
 }
+\value{
+A \code{ggplot} object displaying the residuals vs. predicted values,
+with a horizontal line at zero.
+}
 \description{
 Plots residuals (observed - residuals) values \emph{vs.} predicted values. The
 predicted values are obtained from the model with the parameters values

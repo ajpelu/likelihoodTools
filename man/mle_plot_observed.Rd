@@ -31,6 +31,10 @@ and slope of the regression of the observed on predicted values. See
 
 \item{...}{other ggplot2 parameters}
 }
+\value{
+A \code{ggplot} object displaying the observed vs. predicted values,
+with optional annotations for \eqn{R^2} and regression slope.
+}
 \description{
 Plots observed values \emph{vs.} predicted values. The predicted values are obtained
 from the model with the parameters values estimated by maximum likelihood

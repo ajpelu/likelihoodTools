@@ -12,6 +12,9 @@
 #' @param lab_predicted The text for the predicted axis lab (x-axis)
 #' @param lab_residuals The text for the residual axis lab (y-axis)
 #' @param ... other ggplot2 parameters
+#'
+#' @return A `ggplot` object displaying the residuals vs. predicted values,
+#' with a horizontal line at zero.
 #' @export
 #'
 #' @importFrom rlang .data sym

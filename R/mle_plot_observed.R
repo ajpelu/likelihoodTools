@@ -16,6 +16,9 @@
 #' @param lab_y The text for the y-axis lab
 #' @param ... other ggplot2 parameters
 #'
+#' @return A `ggplot` object displaying the observed vs. predicted values,
+#' with optional annotations for \eqn{R^2} and regression slope.
+#'
 #' @export
 #'
 #' @importFrom rlang .data sym
@@ -118,6 +121,6 @@ mle_plot_observed <- function(x, yvar, annotate = TRUE,
     out_p <- p
   }
 
-  print(out_p)
+  return(out_p)
 }
 
