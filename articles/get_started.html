@@ -80,10 +80,12 @@ package provides a set of tools to help you work with the
 <code>likelihoodTools</code> package.</p>
 <p>We will show you how to create a model function, compute the MLE of
 the parameters (both steps from <code>likelihood</code> package), and
-then how to use the <code>likelihoodTools</code> package to: (i) extract
-the main information from the MLE results, (ii) plot residuals
-vs. predicted values, and (iii) plot the residuals vs. the observed
-values.</p>
+then how to use the <code>likelihoodTools</code> package to:</p>
+<ul>
+<li>extract the main information from the MLE results</li>
+<li>plot residuals <em>vs.</em> predicted values</li>
+<li>plot the residuals <em>vs.</em> the observed values.</li>
+</ul>
 <div class="section level4">
 <h4 id="maximum-likelihood-estimation-of-the-models-parameters">Maximum Likelihood Estimation of the models parameters<a class="anchor" aria-label="anchor" href="#maximum-likelihood-estimation-of-the-models-parameters"></a>
 </h4>
@@ -111,9 +113,10 @@ package.</p>
 <span>                  max_iter <span class="op">=</span> <span class="fl">20000</span>,</span>
 <span>                  show_display <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></code></pre></div>
 </div>
-<div class="section level4">
-<h4 id="extract-the-main-information-from-the-mle-results">Extract the main information from the MLE results<a class="anchor" aria-label="anchor" href="#extract-the-main-information-from-the-mle-results"></a>
-</h4>
+</div>
+<div class="section level3">
+<h3 id="extract-the-main-information-from-the-mle-results">Extract the main information from the MLE results<a class="anchor" aria-label="anchor" href="#extract-the-main-information-from-the-mle-results"></a>
+</h3>
 <p>The <code>likellihood::anneal()</code> function returns a list object
 with information on the annealing run. This list-type object contains
 several information (see <code>likellihood::anneal()</code> for more
@@ -197,9 +200,9 @@ RMSE
 </tr></tbody>
 </table>
 </div>
-<div class="section level4">
-<h4 id="plot-the-residuals-vs--predicted-values">Plot the residuals vs. predicted values<a class="anchor" aria-label="anchor" href="#plot-the-residuals-vs--predicted-values"></a>
-</h4>
+<div class="section level3">
+<h3 id="plot-the-residuals-vs--predicted-values">Plot the residuals <em>vs.</em> predicted values<a class="anchor" aria-label="anchor" href="#plot-the-residuals-vs--predicted-values"></a>
+</h3>
 <p>The <code><a href="../reference/mle_plot_residuals.html">mle_plot_residuals()</a></code> function allows you to plot the
 residuals (observed - residuals) values <em>vs.</em> predicted values.
 The predicted values are obtained from the model with the parameters
@@ -209,9 +212,9 @@ annealing.</p>
 <code class="sourceCode R"><span><span class="va">p_residuals</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mle_plot_residuals.html">mle_plot_residuals</a></span><span class="op">(</span><span class="va">results</span>, yvar <span class="op">=</span> <span class="st">"Radius"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="get_started_files/figure-html/plot_residuals-1.png" width="432" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="plot-the-predicted-vs--observed-values">Plot the predicted vs. observed values<a class="anchor" aria-label="anchor" href="#plot-the-predicted-vs--observed-values"></a>
-</h4>
+<div class="section level3">
+<h3 id="plot-the-predicted-vs--observed-values">Plot the predicted <em>vs.</em> observed values<a class="anchor" aria-label="anchor" href="#plot-the-predicted-vs--observed-values"></a>
+</h3>
 <p>The <code><a href="../reference/mle_plot_observed.html">mle_plot_observed()</a></code> function allows you to plot the
 predicted values <em>vs.</em> observed values. The predicted values are
 obtained from the model with the parameters values estimated by maximum
@@ -220,11 +223,11 @@ likelihood estimation using simulated annealing.</p>
 <code class="sourceCode R"><span><span class="va">p_observed</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mle_plot_observed.html">mle_plot_observed</a></span><span class="op">(</span><span class="va">results</span>, yvar <span class="op">=</span> <span class="st">"Radius"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="get_started_files/figure-html/plot_observed-1.png" width="432" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="customize-the-plot">Customize the plot<a class="anchor" aria-label="anchor" href="#customize-the-plot"></a>
-</h4>
+<div class="section level3">
+<h3 id="customize-the-plot">Customize the plot<a class="anchor" aria-label="anchor" href="#customize-the-plot"></a>
+</h3>
 <p>If you don’t like the default plot, you can customize it using
-<code>ggplot2</code> <span class="citation">(@ Wickham 2016)</span>
+<code>ggplot2</code> <span class="citation">(Wickham 2016)</span>
 parameters. For example, you can increase the size of the points, change
 the color, change axis titles, etc.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
@@ -237,11 +240,12 @@ the color, change axis titles, etc.</p>
 <span>  <span class="op">)</span></span></code></pre></div>
 <p><img src="get_started_files/figure-html/plot_observed_custom-1.png" width="432" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="plot-the-distribution-of-the-residuals">Plot the distribution of the residuals<a class="anchor" aria-label="anchor" href="#plot-the-distribution-of-the-residuals"></a>
-</h4>
+<div class="section level3">
+<h3 id="plot-the-distribution-of-the-residuals">Plot the distribution of the residuals<a class="anchor" aria-label="anchor" href="#plot-the-distribution-of-the-residuals"></a>
+</h3>
 <p>Maybe the user could be interested in plot the distribution of the
-residuals. We provided a code to do this.</p>
+residuals. We provided a code to do this (we will implement it as
+function).</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
@@ -280,12 +284,14 @@ Ripley 2002)</span>.</p>
 <span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Please use `linewidth` instead.</span></span>
 <span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span>
 <span><span class="co">#&gt; <span style="color: #555555;">Call `lifecycle::last_lifecycle_warnings()` to see where this warning was</span></span></span>
-<span><span class="co">#&gt; <span style="color: #555555;">generated.</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #555555;">generated.</span></span></span>
+<span><span class="va">p_residuals_dist</span> </span></code></pre></div>
+<p><img src="get_started_files/figure-html/residuals_dist_fit-1.png" width="432" style="display: block; margin: auto;"></p>
 </div>
-<div class="section level4">
-<h4 id="more-customization">More customization<a class="anchor" aria-label="anchor" href="#more-customization"></a>
-</h4>
-<p>Maybe the user is intereseted in arrange the residuals plots, the
+<div class="section level3">
+<h3 id="more-customization">More customization<a class="anchor" aria-label="anchor" href="#more-customization"></a>
+</h3>
+<p>Maybe the user is interested in arrange the residuals plots, the
 observed vs.  predicted and the error distribution plots in a single
 plot. There are several packages as <code>patchwork</code> <span class="citation">(Pedersen 2024)</span> or <code>cowplot</code> <span class="citation">(Wilke 2024)</span> that allow you to do this. Here, we
 provide a simple code to do this.</p>
@@ -293,12 +299,12 @@ provide a simple code to do this.</p>
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://patchwork.data-imaginist.com" class="external-link">patchwork</a></span><span class="op">)</span></span>
 <span></span>
 <span></span>
-<span><span class="op">(</span><span class="va">p_observed</span> <span class="op">+</span> <span class="va">p_residuals</span> <span class="op">+</span> <span class="va">p_residuals_dist</span> <span class="op">+</span>  <span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_annotation.html" class="external-link">plot_annotation</a></span><span class="op">(</span>tag_levels <span class="op">=</span> <span class="st">"a"</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span> </span>
+<span><span class="op">(</span><span class="va">p_observed</span> <span class="op">+</span> <span class="va">p_residuals</span> <span class="op">+</span> <span class="va">p_residuals_dist</span> <span class="op">+</span>  </span>
+<span>    <span class="fu"><a href="https://patchwork.data-imaginist.com/reference/plot_annotation.html" class="external-link">plot_annotation</a></span><span class="op">(</span>tag_levels <span class="op">=</span> <span class="st">"a"</span><span class="op">)</span><span class="op">)</span> <span class="op">&amp;</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>axis.title <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span>, </span>
 <span>        axis.text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">11</span><span class="op">)</span>,</span>
 <span>        plot.tag <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html" class="external-link">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span>, face <span class="op">=</span> <span class="st">"bold"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p><img src="get_started_files/figure-html/arrange_plots-1.png" width="960" style="display: block; margin: auto;"></p>
-</div>
 </div>
 <div class="section level2">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
