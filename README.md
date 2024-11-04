@@ -1,7 +1,9 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# likelihoodTools: Tools for Managing Maximum Likelihood Estimation Results
+# <span style="color:#43839f">likelihoodTools</span> <img src="inst/logo/logo_likelihoodtools.png" align="right" width="240"/>
+
+# Tools for Managing Maximum Likelihood Estimation Results
 
 <!-- badges: start -->
 
@@ -41,8 +43,9 @@ pak::pak("ajpelu/likelihoodTools")
 
 ## Usage
 
-See the [Get Started vignette](vignettes/articles/get_started.Rmd) for a
-comprehensive introduction to the package.
+See the [Get Started
+vignette](https://ajpelu.github.io/likelihoodTools/articles/get_started.html)
+for a comprehensive introduction to the package.
 
 ### Key Features
 
