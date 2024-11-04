@@ -24,6 +24,8 @@ Suggests:
     likelihood,
     kableExtra,
     MASS,
-    patchwork
+    patchwork,
+    spelling
 Config/testthat/edition: 3
 Config/Needs/website: rmarkdown
+Language: en-US
