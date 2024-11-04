@@ -32,8 +32,11 @@ illustrate how to use the `likelihoodTools` package.
 
 We will show you how to create a model function, compute the MLE of the parameters 
 (both steps from `likelihood` package), and then how to use the `likelihoodTools` 
-package to: (i) extract the main information from the MLE results, (ii) plot 
-residuals vs. predicted values, and (iii) plot the residuals vs. the observed values.
+package to: 
+
+- extract the main information from the MLE results
+- plot residuals *vs.* predicted values
+- plot the residuals *vs.* the observed values.
 
 ### Maximum Likelihood Estimation of the models parameters
 As indicated in the `likelihood` package the first step is to formulate the model 
@@ -68,11 +71,10 @@ results <- anneal(model = modelfun,
 ```
 
 
-### Extract the main information from the MLE results
+## Extract the main information from the MLE results
 
 The `likellihood::anneal()` function returns a list object with information on the annealing run. 
-This list-type object contains several information (see `likellihood::anneal()` for more details).
-The `mle_format()` function from `likelihoodTools` package allows extract the main 
+This list-type object contains several information (see `likellihood::anneal()` for more details). The `mle_format()` function from `likelihoodTools` package allows extract the main 
 information from the MLE results in a more user-friendly way. 
 
 ```{r mle_format}
@@ -102,7 +104,7 @@ kable(m, escape = FALSE, caption = "MLE Results", digits = 3) |>
 ```
 
 
-### Plot the residuals vs. predicted values 
+## Plot the residuals *vs.* predicted values 
 
 The `mle_plot_residuals()` function allows you to plot the residuals 
 (observed - residuals) values *vs.* predicted values. The predicted 
@@ -113,7 +115,7 @@ likelihood estimation using simulated annealing.
 p_residuals <- mle_plot_residuals(results, yvar = "Radius")
 ```
 
-### Plot the predicted vs. observed values
+## Plot the predicted *vs.* observed values
 
 The `mle_plot_observed()` function allows you to plot the predicted values *vs.* 
 observed values. The predicted values are obtained from the model with the parameters 
@@ -123,8 +125,8 @@ values estimated by maximum likelihood estimation using simulated annealing.
 p_observed <- mle_plot_observed(results, yvar = "Radius")
 ```
 
-### Customize the plot
-If you don't like the default plot, you can customize it using  `ggplot2` [@@ggplot2] parameters.
+## Customize the plot
+If you don't like the default plot, you can customize it using  `ggplot2` [@ggplot2] parameters.
 For example, you can increase the size of the points, change the color, change axis titles, etc.
 
 ```{r plot_observed_custom}
@@ -138,10 +140,10 @@ p_observed +
 ```
 
 
-### Plot the distribution of the residuals 
+## Plot the distribution of the residuals 
 
 Maybe the user could be interested in plot the distribution of the residuals. 
-We provided a code to do this. 
+We provided a code to do this (we will implement it as function). 
 
 ```{r residuals_dist}
 library(ggplot2)
@@ -178,12 +180,13 @@ p_residuals_dist <- p_residuals_dist  + stat_function(fun = dnorm,
               args = list(mean = params$mean, 
                           sd = params$sd), 
               color = "black", size = 1) 
+p_residuals_dist 
 ```
 
 
-### More customization
+## More customization
 
-Maybe the user is intereseted in arrange the residuals plots, the observed vs. 
+Maybe the user is interested in arrange the residuals plots, the observed vs. 
 predicted and the error distribution plots in a single plot. There are several packages 
 as `patchwork` [@patchwork] or `cowplot` [@cowplot] that allow you to do this. Here, 
 we provide a simple code to do this. 
@@ -195,7 +198,8 @@ we provide a simple code to do this.
 library(patchwork)
 
 
-(p_observed + p_residuals + p_residuals_dist +  plot_annotation(tag_levels = "a")) & 
+(p_observed + p_residuals + p_residuals_dist +  
+    plot_annotation(tag_levels = "a")) & 
   theme(axis.title = element_text(size = 14, face = "bold"), 
         axis.text = element_text(size = 11),
         plot.tag = element_text(size = 14, face = "bold"))

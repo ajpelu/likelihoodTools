@@ -39,13 +39,37 @@ You can install the development version of likelihoodTools from
 pak::pak("ajpelu/likelihoodTools")
 ```
 
-## Key Features
+## Usage
+
+See the [Get Started vignette](vignettes/articles/get_started.Rmd) for a
+comprehensive introduction to the package.
+
+### Key Features
 
 - Tools for organizing MLE outputs.
 - Functions to explore, visualize, and interpret parameter estimation
   results.
 - Integrations with dplyr and ggplot2 for efficient data manipulation
   and visualization.
+
+### A litle of history
+
+The likelihood package was developed initially by [Charles
+Canham](https://www.caryinstitute.org/science/our-scientists/dr-charles-d-canham)
+and [Lora Murphy](https://www.caryinstitute.org/lora-murphy) from the
+[Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/)
+(Milbrook, NY, US). The package was designed to facilitate the use of
+maximum likelihood estimation in R, using simulated annealing as the
+optimization routine. The implementation of simulated annealing was
+adapted from Goffe et al. (1994), and allows bounded searches.
+
+The likelihood package has been used in multiple scientific studies to
+explore various aspects of tree forest ecology worldwide (*e.g*. Canham
+and Uriarte 2006, Canham et al. 2006, Gómez-Aparicio et al. 2009, 2011,
+Gea-Izquierdo et al. 2013, Fernández-de-Uña et al. 2015). Despite its
+broad use, it has lacked user-friendly tools for managing and exploring
+parameter estimation results. This gap inspired the development of the
+likelihoodTools package
 
 ## Citation
 
@@ -69,25 +93,6 @@ A BibTeX entry for LaTeX users is
     note = {R package version 0.1.0},
   }
 ```
-
-### A litle of history
-
-The likelihood package was developed initially by [Charles
-Canham](https://www.caryinstitute.org/science/our-scientists/dr-charles-d-canham)
-and [Lora Murphy](https://www.caryinstitute.org/lora-murphy) from the
-[Cary Institute of Ecosystem Studies](https://www.caryinstitute.org/)
-(Milbrook, NY, US). The package was designed to facilitate the use of
-maximum likelihood estimation in R, using simulated annealing as the
-optimization routine. The implementation of simulated annealing was
-adapted from Goffe et al. (1994), and allows bounded searches.
-
-The likelihood package has been used in multiple scientific studies to
-explore various aspects of tree forest ecology worldwide (*e.g*. Canham
-and Uriarte 2006, Canham et al. 2006, Gómez-Aparicio et al. 2009, 2011,
-Gea-Izquierdo et al. 2013, Fernández-de-Uña et al. 2015). Despite its
-broad use, it has lacked user-friendly tools for managing and exploring
-parameter estimation results. This gap inspired the development of the
-likelihoodTools package
 
 ## Funding
 

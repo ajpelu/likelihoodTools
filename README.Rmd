@@ -45,22 +45,17 @@ You can install the development version of likelihoodTools from
 pak::pak("ajpelu/likelihoodTools")
 ```
 
-## Key Features
+## Usage 
+See the [Get Started vignette](vignettes/articles/get_started.Rmd) for a comprehensive introduction to the package. 
 
+
+### Key Features
 - Tools for organizing MLE outputs.
 - Functions to explore, visualize, and interpret parameter estimation results.
 - Integrations with dplyr and ggplot2 for efficient data manipulation and visualization.
 
-## Citation
-
-If using this package, please cite it:
-
-```{r comment=NA}
-citation("likelihoodTools")
-```
 
 ### A litle of history
-
 The likelihood package was developed initially by [Charles Canham](https://www.caryinstitute.org/science/our-scientists/dr-charles-d-canham) 
 and [Lora Murphy](https://www.caryinstitute.org/lora-murphy) from the [Cary Institute 
 of Ecosystem Studies](https://www.caryinstitute.org/) (Milbrook, NY, US). 
@@ -72,6 +67,16 @@ The likelihood package has been used in multiple scientific studies to explore
 various aspects of tree forest ecology worldwide [*e.g*. @CanhamUriarte2006AnalysisNeighborhood;@GomezAparicioetal2009ArePine;@GeaIzquierdoetal2013GrowthProjections;@Canhametal2006NeighborhoodAnalyses;@GomezAparicioetal2011DisentanglingRelative;@FernandezdeUnaetal2015StandCompetition]. Despite its broad use, 
 it has lacked user-friendly tools for managing and exploring parameter estimation 
 results. This gap inspired the development of the likelihoodTools package
+
+
+## Citation
+
+If using this package, please cite it:
+
+```{r comment=NA}
+citation("likelihoodTools")
+```
+
 
 ## Funding 
 
