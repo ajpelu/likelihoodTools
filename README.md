@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# <span style="color:#43839f">likelihoodTools</span> <img src="inst/logo/logo_likelihoodtools.png" align="right" width="240"/>
+# <span style="color:#43839f">likelihoodTools</span> <img src="man/figures/logo_likelihoodtools.png" align="right" width="240"/>
 
 # Tools for Managing Maximum Likelihood Estimation Results
 
