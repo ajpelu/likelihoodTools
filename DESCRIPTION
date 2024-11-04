@@ -1,8 +1,8 @@
 Package: likelihoodTools
-Title: Tools for managing results from Maximum Likelihood Estimation
+Title: Tools for Managing Results from Maximum Likelihood Estimation
 Version: 0.1.0
 Authors@R: 
-    person("Antonio Jesús", "Pérez-Luque", , "ajpelu@gmail.com", role = c("cre", "aut"),
+    person("Antonio Jesús", "Pérez-Luque", , "ajpelu@gmail.com", role = c("cre", "aut", "cph"),
            comment = c(ORCID = "0000-0002-1747-0469"))
 Description: Tools for managing and exploring parameter estimation results derived 
     from Maximum Likelihood Estimation (MLE) using the `likelihood` package. 
