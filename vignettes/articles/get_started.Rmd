@@ -50,24 +50,30 @@ dataset <- crown_rad
 
 
 ```{r model_fun}
-modelfun <- function (a, b, DBH) {a + b * DBH}
+modelfun <- function(a, b, DBH) {
+  a + b * DBH
+}
 ```
 
 Then, compute them MLE of the parameters using the `anneal` function from the 
 `likelihood` package.
 
 ```{r mle}
-results <- anneal(model = modelfun,
-                  par = list(a = 0, b = 0),
-                  var = list(DBH = "DBH", x = "Radius", mean = "predicted",
-                             sd = 0.815585, log = TRUE),
-                  source_data = dataset,
-                  par_lo = list(a = 0, b = 0),
-                  par_hi = list(a = 50, b = 50),
-                  pdf = dnorm,
-                  dep_var = "Radius",
-                  max_iter = 20000,
-                  show_display = FALSE)
+results <- anneal(
+  model = modelfun,
+  par = list(a = 0, b = 0),
+  var = list(
+    DBH = "DBH", x = "Radius", mean = "predicted",
+    sd = 0.815585, log = TRUE
+  ),
+  source_data = dataset,
+  par_lo = list(a = 0, b = 0),
+  par_hi = list(a = 50, b = 50),
+  pdf = dnorm,
+  dep_var = "Radius",
+  max_iter = 20000,
+  show_display = FALSE
+)
 ```
 
 
@@ -88,18 +94,18 @@ m <- mle_format(results, yvar = "Radius")
 
 # Rename the columns
 colnames(m) <- c(
-  "Maximum Likelihood", 
-  "# Params.", 
-  "AIC~cor~", 
-  "AIC", 
-  "R^2^", 
-  "Slope", 
+  "Maximum Likelihood",
+  "# Params.",
+  "AIC~cor~",
+  "AIC",
+  "R^2^",
+  "Slope",
   "RMSE"
 )
 
 # Print the results in a table
 library(kableExtra)
-kable(m, escape = FALSE, caption = "MLE Results", digits = 3) |> 
+kable(m, escape = FALSE, caption = "MLE Results", digits = 3) |>
   kable_styling(full_width = F, position = "center", bootstrap_options = c("striped", "hover"))
 ```
 
@@ -150,19 +156,20 @@ library(ggplot2)
 library(dplyr)
 
 # compute the residuals
-d <- results$source_data |> 
+d <- results$source_data |>
   dplyr::mutate(residuals = Radius - predicted)
 
 # plot the histogram
 p_residuals_dist <- ggplot(data = d, aes(x = residuals)) +
-  geom_histogram(aes(y = after_stat(density), x = residuals), 
-                   fill = "gray", col = "white", bins = 30) +
+  geom_histogram(aes(y = after_stat(density), x = residuals),
+    fill = "gray", col = "white", bins = 30
+  ) +
   theme_bw() +
   theme(panel.grid = element_blank()) +
   xlab("Residuals") +
   ylab("Density")
 
-p_residuals_dist 
+p_residuals_dist
 ```
 
 Now, we can add the distribution to the histogram. For those, we used the `MASS` package
@@ -171,25 +178,27 @@ Now, we can add the distribution to the histogram. For those, we used the `MASS`
 ```{r residuals_dist_fit}
 library(MASS)
 
-# estimate the distribution of the residuals  
-dist <- MASS::fitdistr(d$residuals, "normal") 
+# estimate the distribution of the residuals
+dist <- MASS::fitdistr(d$residuals, "normal")
 params <- as.data.frame(t(dist$estimate))
 
 
-p_residuals_dist <- p_residuals_dist  + stat_function(fun = dnorm, 
-              args = list(mean = params$mean, 
-                          sd = params$sd), 
-              color = "black", size = 1) 
-p_residuals_dist 
+p_residuals_dist <- p_residuals_dist + stat_function(
+  fun = dnorm,
+  args = list(
+    mean = params$mean,
+    sd = params$sd
+  ),
+  color = "black", linewidth = 1
+)
+p_residuals_dist
 ```
 
 
 ## More customization
 
 Maybe the user is interested in arrange the residuals plots, the observed vs. 
-predicted and the error distribution plots in a single plot. There are several packages 
-as `patchwork` [@patchwork] or `cowplot` [@cowplot] that allow you to do this. Here, 
-we provide a simple code to do this. 
+predicted and the error distribution plots in a single plot. There are several packages as `patchwork` [@patchwork] or `cowplot` [@cowplot] that allow you to do this. Here, we provide a simple code to do this. 
 
 ```{r arrange_plots}
 #| fig.width: 10
@@ -198,13 +207,13 @@ we provide a simple code to do this.
 library(patchwork)
 
 
-(p_observed + p_residuals + p_residuals_dist +  
-    plot_annotation(tag_levels = "a")) & 
-  theme(axis.title = element_text(size = 14, face = "bold"), 
-        axis.text = element_text(size = 11),
-        plot.tag = element_text(size = 14, face = "bold"))
-
+(p_observed + p_residuals + p_residuals_dist +
+  plot_annotation(tag_levels = "a")) &
+  theme(
+    axis.title = element_text(size = 14, face = "bold"),
+    axis.text = element_text(size = 11),
+    plot.tag = element_text(size = 14, face = "bold")
+  )
 ```
 
 # References
-
