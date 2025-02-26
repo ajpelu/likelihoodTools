@@ -1,5 +1,5 @@
 Package: likelihoodTools
-Title: Tools for managing results from maximum likelihood estimation
+Title: Tools for Managing Results from Maximum Likelihood Estimation
 Version: 0.1.0
 Authors@R: 
     person("Antonio Jesús", "Pérez-Luque", , "ajpelu@gmail.com", role = c("cre", "aut", "cph"),

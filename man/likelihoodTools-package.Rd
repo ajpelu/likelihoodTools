@@ -13,7 +13,7 @@ Useful links:
 \itemize{
   \item \url{https://github.com/ajpelu/likelihoodTools}
   \item \url{https://ajpelu.github.io/likelihoodTools/}
-  \item Report bugs at \url{https://github.com/ajpelu/likelihoodTools/issues/}
+  \item Report bugs at \url{https://github.com/ajpelu/likelihoodTools/issues}
 }
 
 }
