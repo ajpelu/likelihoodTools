@@ -4,7 +4,7 @@
 \name{likelihoodTools-package}
 \alias{likelihoodTools}
 \alias{likelihoodTools-package}
-\title{likelihoodTools: Tools for Managing Results from Maximum Likelihood Estimation}
+\title{likelihoodTools: Tools for managing results from maximum likelihood estimation}
 \description{
 Tools for managing and exploring parameter estimation results derived from Maximum Likelihood Estimation (MLE) using the `likelihood` package.
 }
