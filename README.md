@@ -16,7 +16,7 @@ stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://
 Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![HitCount](https://hits.dwyl.com/ajpelu/likelihoodTools.svg?style=flat-square)](https://hits.dwyl.com/ajpelu/ajpelu/likelihoodTools)
+[![HitCount](https://hits.dwyl.com/ajpelu/ajpelu/likelihoodTools.svg?style=flat-square)](http://hits.dwyl.com/ajpelu/ajpelu/likelihoodTools)
 <!-- badges: end -->
 
 The likelihoodTools package provides tools for managing and exploring
