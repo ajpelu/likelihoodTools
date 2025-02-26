@@ -1,3 +1,3 @@
-# likelihoodTools 0.1.0
+# likelihoodTools 1.0.0
 
 * Initial CRAN submission.
