@@ -3,7 +3,7 @@
 
 # <span style="color:#43839f">likelihoodTools</span> <img src="man/figures/logo_likelihoodtools.png" align="right" width="240"/>
 
-# Tools for Managing Maximum Likelihood Estimation Results
+# Managing Maximum Likelihood Estimation Results
 
 <!-- badges: start -->
 
@@ -18,9 +18,9 @@ Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repost
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
 
-The likelihoodTools package provides tools for managing and exploring
-parameter estimation results derived from Maximum Likelihood Estimation
-(MLE) using the
+The likelihoodTools package provides functions for managing and
+exploring parameter estimation results derived from Maximum Likelihood
+Estimation (MLE) using the
 [likelihood](https://CRAN.R-project.org/package=likelihood) package.
 This package simplifies analysis workflows by offering functions that
 support the organization, visualization, and summary of MLE outcomes,
