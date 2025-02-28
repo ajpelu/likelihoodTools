@@ -3,7 +3,7 @@ pkgdown: 2.1.1
 pkgdown_sha: ~
 articles:
   articles/get_started: get_started.html
-last_built: 2025-02-27T18:28Z
+last_built: 2025-02-28T14:55Z
 urls:
   reference: https://ajpelu.github.io/likelihoodTools/reference
   article: https://ajpelu.github.io/likelihoodTools/articles
