@@ -22,13 +22,13 @@
      inkscape:pagecheckerboard="1"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="pt"
-     inkscape:zoom="1.7469907"
-     inkscape:cx="255.58235"
-     inkscape:cy="848.8883"
+     inkscape:zoom="1.1572757"
+     inkscape:cx="263.98203"
+     inkscape:cy="-9.0730321"
      inkscape:window-width="1664"
-     inkscape:window-height="1323"
+     inkscape:window-height="1318"
      inkscape:window-x="1562"
-     inkscape:window-y="32"
+     inkscape:window-y="25"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg163" />
   <defs
@@ -3225,7 +3225,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#ffffff;stroke-width:0.520132"
        x="131.04028"
        y="449.55838"
-       sodipodi:role="line">llikelihoodTools</tspan></text>
+       sodipodi:role="line">likelihoodTools</tspan></text>
   <polyline
      points="124.73,16.93 129.36,31.93 133.98,46.18 138.61,59.74 143.24,72.67 147.87,85.01 152.50,96.80 157.12,108.08 161.75,118.88 166.38,129.23 171.01,139.15 175.64,148.66 180.26,157.80 184.89,166.57 189.52,175.00 194.15,183.10 198.78,190.88 203.40,198.36 208.03,205.55 212.66,212.46 217.29,219.11 221.92,225.49 226.55,231.62 231.17,237.51 235.80,243.17 240.43,248.59 245.06,253.78 249.69,258.76 254.31,263.52 258.94,268.07 263.57,272.41 268.20,276.54 272.83,280.48 277.45,284.21 282.08,287.74 286.71,291.07 291.34,294.20 295.97,297.13 300.60,299.87 305.22,302.40 309.85,304.74 314.48,306.86 319.11,308.79 323.74,310.50 328.36,311.99 332.99,313.27 337.62,314.33 342.25,315.15 346.88,315.73 351.50,316.06 356.13,316.13 360.76,315.93 365.39,315.45 370.02,314.67 374.64,313.57 379.27,312.13 383.90,310.33 388.53,308.14 393.16,305.53 397.79,302.46 402.41,298.89 407.04,294.76 411.67,290.01 416.30,284.57 420.93,278.34 425.55,271.20 430.18,263.01 434.81,253.57 439.44,242.64 444.07,229.88 448.69,214.80 453.32,196.71 457.95,174.51 462.58,146.40 467.21,108.95 471.83,54.49 "
      style="stroke:#090000;stroke-width:5.175;stroke-linecap:butt;stroke-dasharray:none;stroke-opacity:1"
@@ -4116,9 +4116,9 @@
      style="font-weight:bold;font-size:18.6667px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:1px;word-spacing:0.17px;white-space:pre;shape-inside:url(#rect330);display:inline;fill:#f8b1b1;fill-opacity:1;stroke:#f8b1b1;stroke-width:4.66667;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="415.63867"
        y="162.86422"
-       id="tspan6"><tspan
+       id="tspan2"><tspan
          style="font-weight:normal;-inkscape-font-specification:Arial;fill:#ffffff;stroke:none"
-         id="tspan5">MLE</tspan></tspan></text>
+         id="tspan1">MLE</tspan></tspan></text>
   <path
      inkscape:export-ydpi="300"
      inkscape:export-xdpi="300"
@@ -4246,16 +4246,16 @@
   </g>
   <text
      xml:space="preserve"
-     style="font-size:22px;line-height:0;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0.260064px;word-spacing:0.0442111px;white-space:pre;fill:#43839f;fill-opacity:0.98823529;stroke-width:0.520132;stroke-opacity:0.981964"
+     style="font-size:22px;line-height:0;font-family:Helvetica;-inkscape-font-specification:Helvetica;letter-spacing:0.260064px;word-spacing:0.0442111px;white-space:pre;fill:#43839f;fill-opacity:0.988235;stroke-width:0.520132;stroke-opacity:0.981964"
      x="-170.61244"
      y="283.37469"
      id="text3-6-8-5"
      transform="rotate(-29.445726)"><tspan
        id="tspan3-0-5-7"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#43839f;stroke-width:0.520132;fill-opacity:0.98823529"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#43839f;fill-opacity:0.988235;stroke-width:0.520132"
        x="-170.61244"
        y="283.37469"
-       sodipodi:role="line">llikelihoodTools</tspan></text>
+       sodipodi:role="line">likelihoodTools</tspan></text>
   <polyline
      points="124.73,16.93 129.36,31.93 133.98,46.18 138.61,59.74 143.24,72.67 147.87,85.01 152.50,96.80 157.12,108.08 161.75,118.88 166.38,129.23 171.01,139.15 175.64,148.66 180.26,157.80 184.89,166.57 189.52,175.00 194.15,183.10 198.78,190.88 203.40,198.36 208.03,205.55 212.66,212.46 217.29,219.11 221.92,225.49 226.55,231.62 231.17,237.51 235.80,243.17 240.43,248.59 245.06,253.78 249.69,258.76 254.31,263.52 258.94,268.07 263.57,272.41 268.20,276.54 272.83,280.48 277.45,284.21 282.08,287.74 286.71,291.07 291.34,294.20 295.97,297.13 300.60,299.87 305.22,302.40 309.85,304.74 314.48,306.86 319.11,308.79 323.74,310.50 328.36,311.99 332.99,313.27 337.62,314.33 342.25,315.15 346.88,315.73 351.50,316.06 356.13,316.13 360.76,315.93 365.39,315.45 370.02,314.67 374.64,313.57 379.27,312.13 383.90,310.33 388.53,308.14 393.16,305.53 397.79,302.46 402.41,298.89 407.04,294.76 411.67,290.01 416.30,284.57 420.93,278.34 425.55,271.20 430.18,263.01 434.81,253.57 439.44,242.64 444.07,229.88 448.69,214.80 453.32,196.71 457.95,174.51 462.58,146.40 467.21,108.95 471.83,54.49 "
      style="fill:none;stroke:#43839f;stroke-width:5.175;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:0.98823529"
@@ -4284,9 +4284,9 @@
      style="font-weight:bold;font-size:18.6667px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:1px;word-spacing:0.17px;white-space:pre;shape-inside:url(#rect330-2);display:inline;fill:#f8b1b1;fill-opacity:1;stroke:#f8b1b1;stroke-width:4.66667;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="415.63867"
        y="162.86422"
-       id="tspan8"><tspan
+       id="tspan4"><tspan
          style="font-weight:normal;-inkscape-font-specification:Arial;fill:#ffffff;stroke:none"
-         id="tspan7">MLE</tspan></tspan></text>
+         id="tspan3">MLE</tspan></tspan></text>
   <path
      inkscape:export-ydpi="300"
      inkscape:export-xdpi="300"
@@ -4305,7 +4305,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:22px;font-family:Helvetica;-inkscape-font-specification:Helvetica;fill:#43839f;fill-opacity:0.988235;stroke-width:0.520132"
        x="-182.44069"
        y="782.32739"
-       sodipodi:role="line">llikelihoodTools</tspan></text>
+       sodipodi:role="line">likelihoodTools</tspan></text>
   <g
      id="g354"
      clip-path="url(#clipPath355)">
@@ -4438,7 +4438,7 @@
      style="font-weight:bold;font-size:18.6667px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';letter-spacing:1px;word-spacing:0.17px;white-space:pre;shape-inside:url(#rect330-2-2);display:inline;fill:#4584a0;fill-opacity:1;stroke:#f8b1b1;stroke-width:4.66667;stroke-dasharray:none;stroke-opacity:1"><tspan
        x="415.63867"
        y="162.86422"
-       id="tspan10"><tspan
+       id="tspan6"><tspan
          style="font-weight:normal;-inkscape-font-specification:Arial;stroke:none"
-         id="tspan9">MLE</tspan></tspan></text>
+         id="tspan5">MLE</tspan></tspan></text>
 </svg>
