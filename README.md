@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# <span style="color:#43839f">likelihoodTools</span> <img src="man/figures/logo_likelihoodtools.png" align="right" width="240"/>
+# <span style="color:#43839f">likelihoodTools</span> <img src="man/figures/logo_likelihoodtools.png" align="right" width="300"/>
 
 # Managing Maximum Likelihood Estimation Results
 
@@ -81,21 +81,25 @@ likelihoodTools package
 If using this package, please cite it:
 
 ``` r
+library("likelihoodTools")
 citation("likelihoodTools")
 To cite package 'likelihoodTools' in publications use:
 
-  Pérez-Luque AJ (2024). _likelihoodTools: Tools for managing results
-  from Maximum Likelihood Estimation_. R package version 0.1.0,
-  <https://ajpelu.github.io/likelihoodTools/>.
+  Pérez-Luque AJ (2025). _likelihoodTools: Managing Results from
+  Maximum Likelihood Estimation_.
+  doi:10.32614/cran.package.likelihoodtools
+  <https://doi.org/10.32614/cran.package.likelihoodtools>, R package
+  version 1.0.0, <https://ajpelu.github.io/likelihoodTools/>.
 
 A BibTeX entry for LaTeX users is
 
   @Manual{,
-    title = {likelihoodTools: Tools for managing results from Maximum Likelihood Estimation},
+    title = {likelihoodTools: Managing Results from Maximum Likelihood Estimation},
     author = {Antonio Jesús Pérez-Luque},
-    year = {2024},
+    year = {2025},
     url = {https://ajpelu.github.io/likelihoodTools/},
-    note = {R package version 0.1.0},
+    doi = {10.32614/cran.package.likelihoodtools},
+    note = {R package version 1.0.0},
   }
 ```
 

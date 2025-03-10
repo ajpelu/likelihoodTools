@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# <span style="color:#43839f">likelihoodTools</span> <img src="man/figures/logo_likelihoodtools.png" align="right" width="240"/>
+# <span style="color:#43839f">likelihoodTools</span> <img src="man/figures/logo_likelihoodtools.png" align="right" width="300"/>
 
 # Managing Maximum Likelihood Estimation Results
 
@@ -76,6 +76,7 @@ results. This gap inspired the development of the likelihoodTools package
 If using this package, please cite it:
 
 ```{r comment=NA}
+library("likelihoodTools")
 citation("likelihoodTools")
 ```
 
