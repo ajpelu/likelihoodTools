@@ -1,8 +1,9 @@
 bibentry(
   bibtype  = "Manual",
-  title    = "likelihoodTools: Tools for managing results from Maximum Likelihood Estimation",
+  title    = "likelihoodTools: Managing Results from Maximum Likelihood Estimation",
   author   = "Antonio Jesús Pérez-Luque",
-  year     = "2024",
+  year     = "2025",
   url      = "https://ajpelu.github.io/likelihoodTools/",
-  note     = "R package version 0.1.0"
+  doi      = "10.32614/cran.package.likelihoodtools",
+  note     = "R package version 1.0.0, https://ajpelu.github.io/likelihoodTools/"
 )
