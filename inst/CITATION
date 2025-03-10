@@ -5,5 +5,5 @@ bibentry(
   year     = "2025",
   url      = "https://ajpelu.github.io/likelihoodTools/",
   doi      = "10.32614/cran.package.likelihoodtools",
-  note     = "R package version 1.0.0, https://ajpelu.github.io/likelihoodTools/"
+  note     = "R package version 1.0.0"
 )
