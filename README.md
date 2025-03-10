@@ -7,13 +7,16 @@
 
 <!-- badges: start -->
 
+[![](https://www.r-pkg.org/badges/version/likelihoodTools)](https://cran.r-project.org/package=likelihoodTools)
+![](https://img.shields.io/github/r-package/v/ajpelu/likelihoodTools)
+[![R-CMD-check](https://github.com/ajpelu/likelihoodTools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ajpelu/likelihoodTools/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/ajpelu/likelihoodTools/graph/badge.svg)](https://app.codecov.io/gh/ajpelu/likelihoodTools)
-[![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check](https://github.com/ajpelu/likelihoodTools/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ajpelu/likelihoodTools/actions/workflows/R-CMD-check.yaml)
-[![Project Status:
-Active](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/likelihoodTools)](https://cranlogs.r-pkg.org/badges/grand-total/likelihoodTools)
 [![License: GPL
 v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 <!-- badges: end -->
